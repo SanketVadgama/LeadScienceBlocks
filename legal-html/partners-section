@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Partners Section</title>
+  <link rel="stylesheet" href="partners-section.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- ========== THE PARTNERS SECTION ========== -->
+  <section class="partners" id="attorneys">
+    <div class="partners__inner">
+      <div class="partners__header">
+        <h2 class="partners__title">The Partners</h2>
+        <p class="partners__meta">Hover to read bio</p>
+      </div>
+
+      <div class="partners__grid">
+        <!-- Partner 1 -->
+        <div class="partners__card" data-animate>
+          <div class="flip" style="height: 440px">
+            <div class="flip-inner">
+              <!-- Front -->
+              <div class="flip-face">
+                <div class="staff-portrait" style="--staff-ring: #1e40af">
+                  <img
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=700&q=80"
+                    alt="Eleanor R. Sterling"
+                    loading="lazy"
+                  />
+                  <span class="staff-ring"></span>
+                  <div class="staff-tag">
+                    <p class="staff-tag__role">Founding Partner</p>
+                    <h3 class="staff-tag__name">Eleanor R. Sterling</h3>
+                  </div>
+                  <div class="staff-bottom">
+                    <p class="staff-bottom__role">Founding Partner</p>
+                    <h3 class="staff-bottom__name">Eleanor R. Sterling</h3>
+                  </div>
+                </div>
+              </div>
+              <!-- Back -->
+              <div class="flip-face flip-back">
+                <div class="bio-card">
+                  <div>
+                    <p class="bio-card__label">Counsel</p>
+                    <h3 class="bio-card__name">Eleanor R. Sterling</h3>
+                    <div class="bio-card__rule"></div>
+                    <p class="bio-card__text">
+                      Founding Partner. Two decades arguing matters that move markets and headlines. Selected by peers to the bar's top 1%.
+                    </p>
+                  </div>
+                  <div class="bio-card__footer">
+                    <span class="bio-card__admitted-label">Admitted</span>
+                    <span class="bio-card__admitted">NY · CA · DC</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Partner 2 -->
+        <div class="partners__card" data-animate>
+          <div class="flip" style="height: 440px">
+            <div class="flip-inner">
+              <div class="flip-face">
+                <div class="staff-portrait" style="--staff-ring: #1e40af">
+                  <img
+                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=700&q=80"
+                    alt="Marcus L. Vale"
+                    loading="lazy"
+                  />
+                  <span class="staff-ring"></span>
+                  <div class="staff-tag">
+                    <p class="staff-tag__role">Managing Partner</p>
+                    <h3 class="staff-tag__name">Marcus L. Vale</h3>
+                  </div>
+                  <div class="staff-bottom">
+                    <p class="staff-bottom__role">Managing Partner</p>
+                    <h3 class="staff-bottom__name">Marcus L. Vale</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-face flip-back">
+                <div class="bio-card">
+                  <div>
+                    <p class="bio-card__label">Counsel</p>
+                    <h3 class="bio-card__name">Marcus L. Vale</h3>
+                    <div class="bio-card__rule"></div>
+                    <p class="bio-card__text">
+                      Managing Partner. Two decades arguing matters that move markets and headlines. Selected by peers to the bar's top 1%.
+                    </p>
+                  </div>
+                  <div class="bio-card__footer">
+                    <span class="bio-card__admitted-label">Admitted</span>
+                    <span class="bio-card__admitted">NY · TX</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Partner 3 -->
+        <div class="partners__card" data-animate>
+          <div class="flip" style="height: 440px">
+            <div class="flip-inner">
+              <div class="flip-face">
+                <div class="staff-portrait" style="--staff-ring: #1e40af">
+                  <img
+                    src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=700&q=80"
+                    alt="Catherine Wu"
+                    loading="lazy"
+                  />
+                  <span class="staff-ring"></span>
+                  <div class="staff-tag">
+                    <p class="staff-tag__role">Partner — Appellate</p>
+                    <h3 class="staff-tag__name">Catherine Wu</h3>
+                  </div>
+                  <div class="staff-bottom">
+                    <p class="staff-bottom__role">Partner — Appellate</p>
+                    <h3 class="staff-bottom__name">Catherine Wu</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-face flip-back">
+                <div class="bio-card">
+                  <div>
+                    <p class="bio-card__label">Counsel</p>
+                    <h3 class="bio-card__name">Catherine Wu</h3>
+                    <div class="bio-card__rule"></div>
+                    <p class="bio-card__text">
+                      Partner — Appellate. Two decades arguing matters that move markets and headlines. Selected by peers to the bar's top 1%.
+                    </p>
+                  </div>
+                  <div class="bio-card__footer">
+                    <span class="bio-card__admitted-label">Admitted</span>
+                    <span class="bio-card__admitted">CA · 9th Cir.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Partner 4 -->
+        <div class="partners__card" data-animate>
+          <div class="flip" style="height: 440px">
+            <div class="flip-inner">
+              <div class="flip-face">
+                <div class="staff-portrait" style="--staff-ring: #1e40af">
+                  <img
+                    src="https://images.unsplash.com/photo-1542190891-2093d38760f2?auto=format&fit=crop&w=700&q=80"
+                    alt="James A. Okonkwo"
+                    loading="lazy"
+                  />
+                  <span class="staff-ring"></span>
+                  <div class="staff-tag">
+                    <p class="staff-tag__role">Partner — White Collar</p>
+                    <h3 class="staff-tag__name">James A. Okonkwo</h3>
+                  </div>
+                  <div class="staff-bottom">
+                    <p class="staff-bottom__role">Partner — White Collar</p>
+                    <h3 class="staff-bottom__name">James A. Okonkwo</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-face flip-back">
+                <div class="bio-card">
+                  <div>
+                    <p class="bio-card__label">Counsel</p>
+                    <h3 class="bio-card__name">James A. Okonkwo</h3>
+                    <div class="bio-card__rule"></div>
+                    <p class="bio-card__text">
+                      Partner — White Collar. Two decades arguing matters that move markets and headlines. Selected by peers to the bar's top 1%.
+                    </p>
+                  </div>
+                  <div class="bio-card__footer">
+                    <span class="bio-card__admitted-label">Admitted</span>
+                    <span class="bio-card__admitted">NY · DC</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="partners-section.js"></script>
+</body>
+</html>
