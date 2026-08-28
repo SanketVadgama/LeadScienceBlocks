@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Featured Projects</title>
+  <link rel="stylesheet" href="02-featured-projects.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+<section class="projects" id="projects">
+  <div class="projects__inner">
+    <div class="projects__header">
+      <div>
+        <p class="projects__eyebrow">SELECTED WORK / 2019 — 2024</p>
+        <h2 class="projects__title">FEATURED PROJECTS</h2>
+      </div>
+      <div class="projects__tabs" id="project-tabs">
+        <button class="projects__tab is-active" data-i="0">#001</button>
+        <button class="projects__tab" data-i="1">#002</button>
+        <button class="projects__tab" data-i="2">#003</button>
+        <button class="projects__tab" data-i="3">#004</button>
+        <button class="projects__tab" data-i="4">#005</button>
+      </div>
+    </div>
+
+    <div class="projects__grid">
+      <div class="projects__main" id="project-main">
+        <img id="project-main-img" src="https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=1200&q=80" alt="" />
+        <div class="projects__main-overlay"></div>
+        <span class="projects__badge" id="project-badge">#001</span>
+        <div class="projects__card morph-glass-dark">
+          <p class="projects__loc" id="project-loc">Tacoma, WA</p>
+          <h3 class="projects__name" id="project-name">Cascade Logistics Hub</h3>
+          <p class="projects__scope" id="project-scope">Distribution · 480,000 sq ft</p>
+        </div>
+      </div>
+
+      <div class="projects__thumbs" id="project-thumbs">
+        <!-- filled by JS -->
+      </div>
+    </div>
+  </div>
+</section>
+<script src="02-featured-projects.js"></script>
+</body>
+</html>

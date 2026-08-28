@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Let's Build</title>
+  <link rel="stylesheet" href="07-lets-build.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+<section class="inquiry" id="contact">
+  <div class="inquiry__inner">
+    <div class="inquiry__copy">
+      <p class="inquiry__eyebrow">REQUEST A BID</p>
+      <h2 class="inquiry__title">LET'S BUILD.</h2>
+      <p class="inquiry__desc">Tell us about your project. Our preconstruction team responds within one business day with a scope of work and a real number.</p>
+      <div class="inquiry__details">
+        <p>↳ HQ — 4400 4TH AVE S, SEATTLE WA 98134</p>
+        <p>↳ +1 (206) 555-0182</p>
+        <p>↳ BIDS@IRONLINEBUILD.COM</p>
+        <p>↳ 47.5489°N / 122.3320°W</p>
+      </div>
+    </div>
+    <form class="inquiry__form" onsubmit="return false;">
+      <div class="inquiry__row">
+        <input type="text" placeholder="Company" />
+        <input type="text" placeholder="Contact" />
+        <input type="email" placeholder="Email" />
+        <input type="tel" placeholder="Phone" />
+        <select>
+          <option>Project type</option>
+          <option>Commercial</option>
+          <option>Civic</option>
+          <option>Healthcare</option>
+          <option>Industrial</option>
+        </select>
+        <input type="text" placeholder="Budget range" />
+      </div>
+      <textarea rows="4" placeholder="Project description"></textarea>
+      <button type="button" class="inquiry__submit">SUBMIT RFP →</button>
+    </form>
+  </div>
+</section>
+</body>
+</html>
