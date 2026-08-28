@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eight rooms. One ritual flow.</title>
+  <link rel="stylesheet" href="eight-rooms.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+<section class="sanctuary" id="sanctuary">
+  <div class="sanctuary__inner">
+    <div class="sanctuary__header">
+      <div>
+        <p class="sanctuary__eyebrow">The Sanctuary</p>
+        <h2 class="sanctuary__title">Eight rooms. One ritual flow.</h2>
+      </div>
+      <div class="sanctuary__stats">
+        <div><p class="sanctuary__stat-num">12,000</p><p class="sanctuary__stat-label">sq ft</p></div>
+        <div><p class="sanctuary__stat-num">92°F</p><p class="sanctuary__stat-label">vitality pool</p></div>
+        <div><p class="sanctuary__stat-num">8</p><p class="sanctuary__stat-label">treatment rooms</p></div>
+      </div>
+    </div>
+
+    <div class="sanctuary__grid">
+      <div class="sanctuary__list" id="space-list">
+        <button class="sanctuary__item is-active" data-i="0"
+          data-img="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1200&q=80"
+          data-name="Vitality Pool" data-tag="Hydro"
+          data-desc="Mineral-rich 92°F water with chromatherapy and underwater music.">
+          <div class="sanctuary__item-left">
+            <span class="sanctuary__item-num">01</span>
+            <div>
+              <p class="sanctuary__item-name">Vitality Pool</p>
+              <p class="sanctuary__item-tag">Hydro</p>
+            </div>
+          </div>
+          <span class="sanctuary__item-arrow">→</span>
+        </button>
+
+        <button class="sanctuary__item" data-i="1"
+          data-img="https://images.unsplash.com/photo-1571945153237-4929e783af4a?auto=format&fit=crop&w=1200&q=80"
+          data-name="Himalayan Salt Sauna" data-tag="Heat"
+          data-desc="Glow-warmed pink salt walls at 158°F for deep mineral therapy.">
+          <div class="sanctuary__item-left">
+            <span class="sanctuary__item-num">02</span>
+            <div>
+              <p class="sanctuary__item-name">Himalayan Salt Sauna</p>
+              <p class="sanctuary__item-tag">Heat</p>
+            </div>
+          </div>
+          <span class="sanctuary__item-arrow">→</span>
+        </button>
+
+        <button class="sanctuary__item" data-i="2"
+          data-img="https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6?auto=format&fit=crop&w=1200&q=80"
+          data-name="Cold Plunge" data-tag="Cold"
+          data-desc="50°F arctic plunge with breath-coaching pre-set. 2-minute timer.">
+          <div class="sanctuary__item-left">
+            <span class="sanctuary__item-num">03</span>
+            <div>
+              <p class="sanctuary__item-name">Cold Plunge</p>
+              <p class="sanctuary__item-tag">Cold</p>
+            </div>
+          </div>
+          <span class="sanctuary__item-arrow">→</span>
+        </button>
+
+        <button class="sanctuary__item" data-i="3"
+          data-img="https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?auto=format&fit=crop&w=1200&q=80"
+          data-name="Tea Lounge" data-tag="Rest"
+          data-desc="Twelve loose-leaf blends, fresh fruit, and quiet ceramic tones.">
+          <div class="sanctuary__item-left">
+            <span class="sanctuary__item-num">04</span>
+            <div>
+              <p class="sanctuary__item-name">Tea Lounge</p>
+              <p class="sanctuary__item-tag">Rest</p>
+            </div>
+          </div>
+          <span class="sanctuary__item-arrow">→</span>
+        </button>
+
+        <button class="sanctuary__item" data-i="4"
+          data-img="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=1200&q=80"
+          data-name="Forest Quiet Room" data-tag="Calm"
+          data-desc="Hinoki cedar pods, weighted blankets, ambient field recordings.">
+          <div class="sanctuary__item-left">
+            <span class="sanctuary__item-num">05</span>
+            <div>
+              <p class="sanctuary__item-name">Forest Quiet Room</p>
+              <p class="sanctuary__item-tag">Calm</p>
+            </div>
+          </div>
+          <span class="sanctuary__item-arrow">→</span>
+        </button>
+      </div>
+
+      <div class="sanctuary__preview">
+        <img id="space-img" src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1200&q=80" alt="Vitality Pool" />
+        <div class="sanctuary__preview-overlay">
+          <p class="sanctuary__preview-tag" id="space-tag">Hydro</p>
+          <h3 class="sanctuary__preview-name" id="space-name">Vitality Pool</h3>
+          <p class="sanctuary__preview-desc" id="space-desc">Mineral-rich 92°F water with chromatherapy and underwater music.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="eight-rooms.js"></script>
+</body>
+</html>
