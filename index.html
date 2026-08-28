@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Section Library — Manager Review</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    /* ============================================================
+       SHOWCASE CHROME (page wrapper only — not the section blocks)
+       Clean, neutral, professional for manager review
+       ============================================================ */
+    :root {
+      --bg: #f7f6f3;
+      --surface: #ffffff;
+      --ink: #1a1a1a;
+      --muted: #6b6b6b;
+      --line: #e6e4df;
+      --accent: #2c4a3e;
+      --accent-soft: #e8f0ec;
+      --medical: #2e6be6;
+      --legal: #1e40af;
+      --construction: #c47a12;
+      --wellness: #c9764b;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "DM Sans", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ---- Top bar ---- */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(247, 246, 243, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .topbar__inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .topbar__brand {
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: -0.01em;
+    }
+    .topbar__brand span { color: var(--muted); font-weight: 400; }
+    .topbar__nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+    .topbar__nav a {
+      font-size: 0.8rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      color: var(--muted);
+      transition: background 0.2s, color 0.2s;
+    }
+    .topbar__nav a:hover { background: var(--surface); color: var(--ink); }
+
+    /* ---- Hero intro ---- */
+    .intro {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem 3rem;
+    }
+    .intro__eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .intro__title {
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: clamp(2.25rem, 5vw, 3.5rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      max-width: 18ch;
+      margin-bottom: 1.25rem;
+    }
+    .intro__desc {
+      max-width: 36rem;
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 2rem;
+    }
+    .intro__meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .intro__pill {
+      font-size: 0.8rem;
+      padding: 0.4rem 0.85rem;
+      border-radius: 999px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      color: var(--ink);
+    }
+    .intro__pill strong { font-weight: 600; }
+
+    /* ---- Industry group ---- */
+    .group {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 1.5rem 4rem;
+    }
+    .group__head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .group__label {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .group__dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+    .group__dot--medical { background: var(--medical); }
+    .group__dot--legal { background: var(--legal); }
+    .group__dot--construction { background: var(--construction); }
+    .group__dot--wellness { background: var(--wellness); }
+    .group__count {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* ---- Block card ---- */
+    .block {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    }
+    .block__meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--line);
+      background: #fafaf8;
+    }
+    .block__name {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .block__files {
+      font-size: 0.75rem;
+      color: var(--muted);
+      font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    }
+    .block__files code {
+      background: var(--accent-soft);
+      color: var(--accent);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      margin-right: 0.25rem;
+    }
+    .block__frame-wrap {
+      position: relative;
+      background: #eee;
+    }
+    .block__frame {
+      display: block;
+      width: 100%;
+      height: 720px;
+      border: 0;
+      background: #fff;
+    }
+    .block__frame--tall { height: 900px; }
+    .block__frame--short { height: 560px; }
+
+    /* ---- Footer note ---- */
+    .footnote {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 1.5rem 5rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .footnote h3 {
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 0.75rem;
+    }
+    .footnote ul {
+      margin: 1rem 0 0 1.25rem;
+      max-width: 40rem;
+    }
+    .footnote li { margin-bottom: 0.5rem; }
+
+    @media (max-width: 640px) {
+      .block__frame { height: 520px; }
+      .block__frame--tall { height: 640px; }
+      .topbar__nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       TOP NAVIGATION
+       ============================================================ -->
+  <header class="topbar">
+    <div class="topbar__inner">
+      <div class="topbar__brand">Section Library <span>/ reusable blocks</span></div>
+      <nav class="topbar__nav">
+        <a href="#medical">Medical</a>
+        <a href="#legal">Legal</a>
+        <a href="#construction">Construction</a>
+        <a href="#wellness">Wellness</a>
+        <a href="#ideas">Use ideas</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       INTRO (for manager review)
+       ============================================================ -->
+  <section class="intro">
+    <p class="intro__eyebrow">Internal review · HTML / CSS / JS blocks</p>
+    <h1 class="intro__title">Reusable website sections, ready to drop into any project.</h1>
+    <p class="intro__desc">
+      Each block below is self-contained plain HTML, CSS, and vanilla JavaScript —
+      no React, no TypeScript, no Tailwind. Open any section file alone, or reuse pieces across sites.
+    </p>
+    <div class="intro__meta">
+      <span class="intro__pill"><strong>14</strong> sections</span>
+      <span class="intro__pill"><strong>4</strong> industries</span>
+      <span class="intro__pill">Plain HTML · CSS · JS</span>
+      <span class="intro__pill">Copy &amp; adapt</span>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MEDICAL
+       Source folder: medical-html/
+       ============================================================ -->
+  <div class="group" id="medical">
+    <div class="group__head">
+      <div class="group__label">
+        <span class="group__dot group__dot--medical"></span>
+        Medical · Meridian Health
+      </div>
+      <span class="group__count">3 blocks</span>
+    </div>
+
+    <!-- MEDICAL 1: Specialties -->
+    <!-- Files: medical-html/specialties-section.html + .css (no JS) -->
+    <article class="block" id="med-specialties">
+      <div class="block__meta">
+        <div class="block__name">1 · Specialties</div>
+        <div class="block__files">
+          <code>specialties-section.html</code>
+          <code>specialties-section.css</code>
+        </div>
+      </div>
+      <div class="block__frame-wrap">
+        <iframe class="block__frame" title="Specialties section" src="medical-html/specialties-section.html" loading="lazy"></iframe>
+      </div>
+    </article>
+
+    <!-- MEDICAL 2: Care Team -->
+    <!-- Files: medical-html/care-team-section.html + .css + .js -->
+    <article class="block" id="med-care-team">
+      <div class="block__meta">
+        <div class="block__name">2 · Care Team</div>
+        <div class="block__files">
+          <code>care-team-section.html</code>
+          <code>care-team-section.css</code>
+          <code>care-team-section.js</code>
+        </div>
+      </div>
+      <div class="block__frame-wrap">
+        <iframe class="block__frame block__frame--short" title="Care Team section" src="medical-html/care-team-section.html" loading="lazy"></iframe>
+      </div>
+    </article>
+
+    <!-- MEDICAL 3: Real Results -->
+    <!-- Files: medical-html/real-results-section.html + .css + .js -->
+    <article class="block" id="med-results">
+      <div class="block__meta">
+        <div class="block__name">3 · Real Results</div>
+        <div class="block__files">
+          <code>real-results-section.html</code>
+          <code>real-results-section.css</code>
+          <code>real-results-section.js</code>
+        </div>
+      </div>
+      <div class="block__frame-wrap">
+        <iframe class="block__frame block__frame--short" title="Real Results section" src="medical-html/real-results-section.html" loading="lazy"></iframe>
+      </div>
+    </article>
+  </div>
+
+  <!-- ============================================================
+       LEGAL
+       Source folder: legal-html/
+       ============================================================ -->
+  <div class="group" id="legal">
+    <div class="group__head">
+      <div class="group__label">
+        <span class="group__dot group__dot--legal"></span>
+        Legal · Sterling &amp; Vale
+      </div>
+      <span class="group__count">2 blocks</span>
+    </div>
+
+    <!-- LEGAL 1: Practice Areas -->
+    <!-- Files: legal-html/practice-areas-section.html + .css + .js -->
+    <article class="block" id="leg-practice">
+      <div class="block__meta">
+        <div class="block__name">1 · Practice Areas</div>
+        <div class="block__files">
+          <code>practice-areas-section.html</code>
+          <code>practice-areas-section.css</code>
+          <code>practice-areas-section.js</code>
+        </div>
+      </div>
+      <div class="block__frame-wrap">
+        <iframe class="block__frame block__frame--tall" title="Practice Areas" src="legal-html/practice-areas-section.html" loading="lazy"></iframe>
+      </div>
+    </article>
+
+    <!-- LEGAL 2: The Partners -->
+    <!-- Files: legal-html/partners-section.html + .css + .js -->
+    <article class="block" id="leg-partners">
+      <div class="block__meta">
+        <div class="block__name">2 · The Partners</div>
+        <div class="block__files">
+          <code>partners-section.html</code>
+          <code>partners-section.css</code>
+          <code>partners-section.js</code>
+        </div>
+      </div>
+      <div class="block__frame-wrap">
+        <iframe class="block__frame" title="The Partners" src="legal-html/partners-section.html" loading="lazy"></iframe>
+      </div>
+    </article>
+  </div>
+
+  <!-- ============================================================
+       CONSTRUCTION
+       Source folder: construction-html/
+       ============================================================ -->
+  <div class="group" id="construction">
+    <div class="group__head">
+      <div class="group__label">
+        <span class="group__dot group__dot--construction"></span>
+        Construction · Ironline
+      </div>
+      <span class="group__count">7 blocks</span>
+    </div>
+
+    <!-- CONSTRUCTION 1: Hero -->
+    <article class="block" id="con-hero">
+      <div class="block__meta">
+        <div class="block__name">1 · Hero — WE BUILD WHAT LASTS</div>
+        <div class="block__files">
+          <code>01-hero-section.html</code>
+          <code>01-hero-section.css</code>
+          <code>01-hero-section.js</code>
+        </div>
+      </div>
+      <div class="block__frame-wrap">
+        <iframe class="block__frame block__frame--tall" title="Construction Hero" src="construction-html/01-hero-section.html" loading="lazy"></iframe>
+      </div>
+    </article>
+
+    <!-- CONSTRUCTION 2: Featured Projects -->
+    <article class="block" id="con-projects">
+      <div class="block__meta">
+        <div class="block__name">2 · Featured Projects</div>
+        <div class="block__files">
+          <code>02-featured-projects.html</code>
+          <code>02-featured-projects.css</code>
+          <code>02-featured-projects.js</code>
+        </div>
+      </div>
+      <div class="block__frame-wrap">
+        <iframe class="block__frame block__frame--tall" title="Featured Projects" src="construction-html/02-featured-projects.html" loading="lazy"></iframe>
+      </div>
+    </article>
+
+    <!-- CONSTRUCTION 3: What We Do -->
+    <article class="block" id="con-services">
+      <div class="block__meta">
+        <div class="block__name">3 · What We Do</div>
+        <div class="block__files">
+          <code>03-what-we-do.html</code>
+          <code>03-what-we-do.css</code>
+          <code>03-what-we-do.js</code>
+        </div>
+      </div>
+      <div class="block__frame-wrap">
+        <iframe class="block__frame" title="What We Do" src="construction-html/03-what-we-do.html" loading="lazy"></iframe>
+      </div>
+    </article>
+
+    <!-- CONSTRUCTION 4: Dirt to Delivery -->
+    <article class="block" id="con-phases">
+      <div class="block__meta">
+        <div class="block__name">4 · From dirt to delivery</div>
+        <div class="block__files">
+          <code>04-dirt-to-delivery.html</code>
+          <code>04-dirt-to-delivery.css</code>
+          <code>04-dirt-to-delivery.js</code>
+        </div>
+      </div>
+      <div class="block__frame-wrap">
+        <iframe class="block__frame block__frame--tall" title="From dirt to delivery" src="construction-html/04-dirt-to-delivery.html" loading="lazy"></iframe>
+      </div>
+    </article>
+
+    <!-- CONSTRUCTION 5: The Crew -->
+    <article class="block" id="con-crew">
+      <div class="block__meta">
+        <div class="block__name">5 · The Crew</div>
+        <div class="block__files">
+          <code>05-the-crew.html</code>
+          <code>05-the-crew.css</code>
+          <code>05-the-crew.js</code>
+        </div>
+      </div>
+      <div class="block__frame-wrap">
+        <iframe class="block__frame" title="The Crew" src="construction-html/05-the-crew.html" loading="lazy"></iframe>
+      </div>
+    </article>
+
+    <!-- CONSTRUCTION 6: From the Sites -->
+    <article class="block" id="con-sites">
+      <div class="block__meta">
+        <div class="block__name">6 · From the sites</div>
+        <div class="block__files">
+          <code>06-from-the-sites.html</code>
+          <code>06-from-the-sites.css</code>
+          <code>06-from-the-sites.js</code>
+        </div>
+      </div>
+      <div class="block__frame-wrap">
+        <iframe class="block__frame" title="From the sites" src="construction-html/06-from-the-sites.html" loading="lazy"></iframe>
+      </div>
+    </article>
+
+    <!-- CONSTRUCTION 7: Let's Build -->
+    <article class="block" id="con-contact">
+      <div class="block__meta">
+        <div class="block__name">7 · Let's Build (contact / bid form)</div>
+        <div class="block__files">
+          <code>07-lets-build.html</code>
+          <code>07-lets-build.css</code>
+        </div>
+      </div>
+      <div class="block__frame-wrap">
+        <iframe class="block__frame" title="Let's Build" src="construction-html/07-lets-build.html" loading="lazy"></iframe>
+      </div>
+    </article>
+  </div>
+
+  <!-- ============================================================
+       WELLNESS
+       Source folder: wellness-html/
+       ============================================================ -->
+  <div class="group" id="wellness">
+    <div class="group__head">
+      <div class="group__label">
+        <span class="group__dot group__dot--wellness"></span>
+        Wellness · Lumen Spa
+      </div>
+      <span class="group__count">2 blocks</span>
+    </div>
+
+    <!-- WELLNESS 1: Soft, slow, restorative -->
+    <article class="block" id="wel-rituals">
+      <div class="block__meta">
+        <div class="block__name">1 · Soft, slow, restorative.</div>
+        <div class="block__files">
+          <code>soft-slow-restorative.html</code>
+          <code>soft-slow-restorative.css</code>
+        </div>
+      </div>
+      <div class="block__frame-wrap">
+        <iframe class="block__frame block__frame--tall" title="Soft slow restorative" src="wellness-html/soft-slow-restorative.html" loading="lazy"></iframe>
+      </div>
+    </article>
+
+    <!-- WELLNESS 2: Eight rooms -->
+    <article class="block" id="wel-rooms">
+      <div class="block__meta">
+        <div class="block__name">2 · Eight rooms. One ritual flow.</div>
+        <div class="block__files">
+          <code>eight-rooms.html</code>
+          <code>eight-rooms.css</code>
+          <code>eight-rooms.js</code>
+        </div>
+      </div>
+      <div class="block__frame-wrap">
+        <iframe class="block__frame block__frame--tall" title="Eight rooms" src="wellness-html/eight-rooms.html" loading="lazy"></iframe>
+      </div>
+    </article>
+  </div>
+
+  <!-- ============================================================
+       WHAT YOU CAN BUILD (suggestions for manager)
+       ============================================================ -->
+  <section class="footnote" id="ideas">
+    <h3>What you can build with these blocks</h3>
+    <p>These are not full websites — they are modular pieces. Mix and match by industry or by pattern.</p>
+    <ul>
+      <li><strong>Industry microsite</strong> — Pick one industry (e.g. Construction) and stack Hero + Projects + Services + Crew + Contact for a full landing page.</li>
+      <li><strong>Agency portfolio</strong> — Use Featured Projects + From the sites + Partners-style cards to show case studies across clients.</li>
+      <li><strong>Clinic / practice site</strong> — Specialties + Care Team + Real Results + a contact form for a medical or dental practice.</li>
+      <li><strong>Law firm brochure site</strong> — Practice Areas + Partners + a simple inquiry form.</li>
+      <li><strong>Spa booking funnel</strong> — Soft/slow rituals + Eight rooms + Let’s Build–style form for appointments.</li>
+      <li><strong>Internal design system</strong> — Keep this showcase page as the “source of truth” for approved sections your team can copy into client projects.</li>
+      <li><strong>Hybrid pages</strong> — e.g. Construction Hero + Medical Care Team pattern + Wellness gallery for a multi-brand holding company site.</li>
+    </ul>
+    <p style="margin-top: 1.5rem;">
+      <strong>How to reuse:</strong> open the matching folder → copy the three files (or two) for that section into your project → link the CSS/JS in your page. Change images, text, and colors as needed.
+    </p>
+  </section>
+
+</body>
+</html>
