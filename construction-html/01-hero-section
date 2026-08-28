@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hero — WE BUILD WHAT LASTS</title>
+  <link rel="stylesheet" href="01-hero-section.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Inter:wght@400;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+<section class="hero" id="hero">
+  <img class="hero__bg" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2000&q=80" alt="Construction site" />
+  <div class="hero__gradient"></div>
+  <div class="hero__grid-overlay"></div>
+
+  <div class="hero__content">
+    <p class="hero__eyebrow">EST. 1972 · LICENSE #IRONLB*862CA · PACIFIC NW</p>
+    <h1 class="hero__title">
+      <span class="hero__line hero__line--white">WE BUILD</span>
+      <span class="hero__line hero__line--gold">WHAT LASTS.</span>
+    </h1>
+
+    <div class="hero__meta">
+      <p class="hero__desc">Heavy commercial, civic, and industrial construction across the Pacific Northwest. 52 years of self-performed work and zero-incident jobsites.</p>
+      <div class="hero__stat">
+        <p class="hero__stat-num" data-count="480">480</p><span class="hero__stat-suffix">M</span>
+        <p class="hero__stat-label">SQ FT BUILT</p>
+      </div>
+      <div class="hero__stat">
+        <p class="hero__stat-num" data-count="1240">1,240</p>
+        <p class="hero__stat-label">PROJECTS</p>
+      </div>
+      <div class="hero__stat">
+        <p class="hero__stat-num" data-count="52">52</p>
+        <p class="hero__stat-label">YEARS</p>
+      </div>
+    </div>
+
+    <div class="hero__actions">
+      <a href="#contact" class="hero__btn hero__btn--primary">REQUEST BID →</a>
+      <a href="#projects" class="hero__btn hero__btn--ghost">SEE PROJECTS</a>
+    </div>
+  </div>
+</section>
+<script src="01-hero-section.js"></script>
+</body>
+</html>
