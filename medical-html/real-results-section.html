@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Real Results Section</title>
+  <link rel="stylesheet" href="real-results-section.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- ========== REAL RESULTS SECTION ========== -->
+  <section class="real-results" id="results">
+    <div class="real-results__inner">
+      <!-- Copy column -->
+      <div class="real-results__copy">
+        <p class="real-results__eyebrow">Real results</p>
+        <h2 class="real-results__title">Outcomes you can see.</h2>
+        <p class="real-results__desc">
+          From dermatology to orthopedic rehabilitation, our patients
+          consistently report measurable improvements within the first 90 days.
+        </p>
+        <ul class="real-results__list">
+          <li><span class="real-results__check">✓</span> Personalized treatment plans</li>
+          <li><span class="real-results__check">✓</span> Documented progress at every visit</li>
+          <li><span class="real-results__check">✓</span> Long-term outcome tracking</li>
+        </ul>
+      </div>
+
+      <!-- Before / After slider -->
+      <div class="ba-slider" id="ba-slider">
+        <!-- After image (full background) -->
+        <img
+          class="ba-slider__after"
+          src="https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&w=1000&q=80"
+          alt="After"
+          draggable="false"
+        />
+
+        <!-- Before image (clipped) -->
+        <div class="ba-slider__before-wrap" id="ba-before-wrap">
+          <img
+            class="ba-slider__before"
+            id="ba-before-img"
+            src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&w=1000&q=80"
+            alt="Before"
+            draggable="false"
+          />
+        </div>
+
+        <!-- Divider line + handle -->
+        <div class="ba-slider__divider" id="ba-divider">
+          <div class="ba-slider__handle">↔</div>
+        </div>
+
+        <!-- Range input (invisible, full area for drag) -->
+        <input
+          type="range"
+          class="ba-slider__range"
+          id="ba-range"
+          min="0"
+          max="100"
+          value="50"
+          aria-label="Before and after comparison slider"
+        />
+
+        <!-- Labels -->
+        <span class="ba-slider__label ba-slider__label--before">Before</span>
+        <span class="ba-slider__label ba-slider__label--after">After</span>
+      </div>
+    </div>
+  </section>
+
+  <script src="real-results-section.js"></script>
+</body>
+</html>
