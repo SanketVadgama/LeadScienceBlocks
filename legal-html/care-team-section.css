@@ -1,0 +1,183 @@
+/* ========== Care Team Section — plain CSS ========== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  color: #0b1b2b;
+  background: #f7fafc;
+}
+
+/* ---- Section shell ---- */
+.care-team {
+  padding: 6rem 1.5rem;
+}
+
+.care-team__inner {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+/* ---- Header ---- */
+.care-team__header {
+  margin-bottom: 3rem;
+}
+
+.care-team__eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #2e6be6;
+}
+
+.care-team__title {
+  margin-top: 0.75rem;
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .care-team__title {
+    font-size: 3rem;
+  }
+}
+
+/* ---- Grid ---- */
+.care-team__grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .care-team__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ---- Card ---- */
+.care-team__card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.care-team__card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.care-team__card:hover {
+  transform: translateY(-6px);
+}
+
+.care-team__card.is-visible:hover {
+  transform: translateY(-6px);
+}
+
+.care-team__name {
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.care-team__role {
+  font-size: 0.875rem;
+  color: rgba(11, 27, 43, 0.6);
+}
+
+/* ---- Staff portrait effects ---- */
+.staff-portrait {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  border-radius: 1rem;
+  background: rgba(123, 211, 192, 0.2);
+}
+
+.staff-portrait > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(1) contrast(1.02);
+  transition:
+    filter 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.staff-portrait:hover > img {
+  filter: grayscale(0) contrast(1.05);
+  transform: scale(1.06);
+}
+
+.staff-portrait::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent 55%, rgba(0, 0, 0, 0.55) 100%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.staff-portrait:hover::after {
+  opacity: 1;
+}
+
+.staff-portrait .staff-tag {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  right: 14px;
+  z-index: 2;
+  transform: translateY(14px);
+  opacity: 0;
+  transition:
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.45s ease;
+  color: #fff;
+}
+
+.staff-portrait:hover .staff-tag {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.staff-tag__role {
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #7bd3c0;
+}
+
+.staff-tag__cta {
+  margin-top: 0.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.staff-portrait .staff-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 0 var(--staff-ring, #c9a45c);
+  transition: box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.staff-portrait:hover .staff-ring {
+  box-shadow: inset 0 0 0 3px var(--staff-ring, #c9a45c);
+}
