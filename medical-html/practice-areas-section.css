@@ -1,0 +1,184 @@
+/* ========== Practice Areas Section — plain CSS ========== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  color: #0b1f3a;
+  background: #f4f7fb;
+}
+
+.practice-areas {
+  border-bottom: 1px solid #d6e0ec;
+  padding: 6rem 1.5rem;
+}
+
+.practice-areas__inner {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+/* Header */
+.practice-areas__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid #d6e0ec;
+  padding-bottom: 1rem;
+  margin-bottom: 3rem;
+}
+
+.practice-areas__title {
+  font-family: Fraunces, "Playfair Display", Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+@media (min-width: 768px) {
+  .practice-areas__title {
+    font-size: 3.75rem;
+  }
+}
+
+.practice-areas__meta {
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(11, 31, 58, 0.55);
+}
+
+/* Grid */
+.practice-areas__grid {
+  display: grid;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .practice-areas__grid {
+    grid-template-columns: 1.4fr 1fr;
+  }
+}
+
+/* List */
+.practice-areas__list {
+  border-top: 1px solid #d6e0ec;
+}
+
+.practice-areas__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid #d6e0ec;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.practice-areas__item:hover,
+.practice-areas__item.is-active {
+  background-color: rgba(230, 238, 247, 0.6);
+}
+
+.practice-areas__num {
+  min-width: 3rem;
+  padding-top: 0.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #1e40af;
+}
+
+.practice-areas__body {
+  flex: 1;
+}
+
+.practice-areas__name {
+  font-family: Fraunces, "Playfair Display", Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  transition: transform 0.5s ease;
+}
+
+@media (min-width: 768px) {
+  .practice-areas__name {
+    font-size: 2.25rem;
+  }
+}
+
+.practice-areas__item:hover .practice-areas__name,
+.practice-areas__item.is-active .practice-areas__name {
+  transform: translateX(0.5rem);
+}
+
+.practice-areas__desc {
+  margin-top: 0.5rem;
+  max-width: 36rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: rgba(11, 31, 58, 0.65);
+}
+
+.practice-areas__arrow {
+  align-self: center;
+  font-size: 1.5rem;
+  color: rgba(11, 31, 58, 0.25);
+  transition: transform 0.5s ease, color 0.5s ease;
+}
+
+.practice-areas__item:hover .practice-areas__arrow,
+.practice-areas__item.is-active .practice-areas__arrow {
+  transform: translateX(0.5rem);
+  color: #1e40af;
+}
+
+/* Preview image (sticky on desktop) */
+.practice-areas__preview {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .practice-areas__preview {
+    display: block;
+    position: sticky;
+    top: 2rem;
+    align-self: start;
+  }
+}
+
+.practice-areas__img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 2px;
+  filter: grayscale(0.15) contrast(1.05) saturate(1.05);
+  opacity: 1;
+  transition: opacity 0.4s ease, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.practice-areas__img.is-fading {
+  opacity: 0;
+  transform: scale(1.05);
+}
+
+.practice-areas__img-label {
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #1e40af;
+}
+
+@media (max-width: 767px) {
+  .practice-areas__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

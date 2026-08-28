@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practice Areas Section</title>
+  <link rel="stylesheet" href="practice-areas-section.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- ========== PRACTICE AREAS SECTION ========== -->
+  <section class="practice-areas" id="practice">
+    <div class="practice-areas__inner">
+      <div class="practice-areas__header">
+        <h2 class="practice-areas__title">Practice Areas</h2>
+        <p class="practice-areas__meta">Five disciplines · One firm</p>
+      </div>
+
+      <div class="practice-areas__grid">
+        <!-- Left: list -->
+        <div class="practice-areas__list" id="practice-list">
+          <div class="practice-areas__item is-active" data-index="0" data-img="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=900&q=80" data-name="Commercial Litigation">
+            <span class="practice-areas__num">I</span>
+            <div class="practice-areas__body">
+              <h3 class="practice-areas__name">Commercial Litigation</h3>
+              <p class="practice-areas__desc">Complex contract disputes, partnership breakups, and multi-jurisdictional matters.</p>
+            </div>
+            <span class="practice-areas__arrow">→</span>
+          </div>
+
+          <div class="practice-areas__item" data-index="1" data-img="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=900&q=80" data-name="White Collar Defense">
+            <span class="practice-areas__num">II</span>
+            <div class="practice-areas__body">
+              <h3 class="practice-areas__name">White Collar Defense</h3>
+              <p class="practice-areas__desc">Representation in federal investigations and regulatory enforcement actions.</p>
+            </div>
+            <span class="practice-areas__arrow">→</span>
+          </div>
+
+          <div class="practice-areas__item" data-index="2" data-img="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80" data-name="Appellate Practice">
+            <span class="practice-areas__num">III</span>
+            <div class="practice-areas__body">
+              <h3 class="practice-areas__name">Appellate Practice</h3>
+              <p class="practice-areas__desc">Strategic appellate counsel before state, federal, and supreme courts.</p>
+            </div>
+            <span class="practice-areas__arrow">→</span>
+          </div>
+
+          <div class="practice-areas__item" data-index="3" data-img="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80" data-name="Securities & Finance">
+            <span class="practice-areas__num">IV</span>
+            <div class="practice-areas__body">
+              <h3 class="practice-areas__name">Securities &amp; Finance</h3>
+              <p class="practice-areas__desc">SEC enforcement, shareholder disputes, and financial industry regulation.</p>
+            </div>
+            <span class="practice-areas__arrow">→</span>
+          </div>
+
+          <div class="practice-areas__item" data-index="4" data-img="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=900&q=80" data-name="Intellectual Property">
+            <span class="practice-areas__num">V</span>
+            <div class="practice-areas__body">
+              <h3 class="practice-areas__name">Intellectual Property</h3>
+              <p class="practice-areas__desc">Patent litigation, trade secret enforcement, and licensing disputes.</p>
+            </div>
+            <span class="practice-areas__arrow">→</span>
+          </div>
+        </div>
+
+        <!-- Right: sticky image -->
+        <div class="practice-areas__preview">
+          <img
+            id="practice-preview-img"
+            class="practice-areas__img"
+            src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=900&q=80"
+            alt="Commercial Litigation"
+          />
+          <p id="practice-preview-label" class="practice-areas__img-label">Commercial Litigation</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="practice-areas-section.js"></script>
+</body>
+</html>
